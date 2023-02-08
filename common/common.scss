@@ -1,11 +1,11 @@
 // functions  --------------------------------------------------------------------------------
 
 // Calculate brightness value
-
 @function brightness($color) {
-  @return math.div(red($color) + green($color) + blue($color), 255 * 3);
+  @return (red($color) + green($color) + blue($color)) / (255 * 3);
 }
 
+// to base color
 // to base color
 @function brightness_ratio($base, $color) {
   @return abs(brightness($base) - brightness($color));
